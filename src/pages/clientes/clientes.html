@@ -1,0 +1,30 @@
+<!--
+  Generated template for the ClientesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>clientes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row>
+    <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3 >
+      <button ion-button icon-end > 
+        Agregar Cliente
+        <ion-icon name="add" ></ion-icon>
+      </button>
+    </ion-col>
+  </ion-row>
+  <ion-list>
+    <button ion-item *ngFor="let cliente of clientes" (click)="verCliente(cliente)">
+      {{cliente.id}} - {{cliente.name}}
+    </button>
+  </ion-list>
+</ion-content>
